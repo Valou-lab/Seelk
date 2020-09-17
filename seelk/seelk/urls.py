@@ -26,7 +26,7 @@ router.register(r'users', views.UserViewSet)
 # Use automatic URL routing
 # Can also include login URLs for the browsable API
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('', TemplateView.as_view(template_name='home.html'), name='home', ),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),

@@ -7,6 +7,20 @@
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">Log Out</a></p>
+  Create an alert
+  <form action="../crypto/" method="post">
+    {% csrf_token %}
+    <label for="crypto_money">Crypto money: </label>
+    <input id="crypto_money" type="text" name="crypto_money" value="{{ current_name }}">
+    <br />
+    <label for="real_money">Real money: </label>
+    <input id="real_money" type="text" name="real_money" value="{{ current_name }}">
+    <br />
+    <label for="rate">Rate: </label>
+    <input id="rate" type="number" name="rate" value="{{ current_name }}">
+    <br />
+    <input type="submit" value="Create">
+  </form>
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">Log In</a>

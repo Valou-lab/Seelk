@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Latest Bitcoin Price</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    </head>
+    <body style="margin:20px;">
+    
+        <div class="alert alert-dark" role="alert">
+            <span style="font-size:30px;">Latest Price</span>
+        </div>
+        
+        <div class="list-group">
+            <div class="list-group-item list-group-item-primary">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label>Crypto Money</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>Real Money</label>
+                    </div>
+                    <div class="col-md-3">
+                        <label>Rate</label>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        {{crypto_data.asset_id_base}}
+                    </div>
+                    <div class="col-md-3">
+                        {{crypto_data.asset_id_quote}}
+                    </div>
+                    <div class="col-md-3">
+                        {{crypto_data.rate}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
